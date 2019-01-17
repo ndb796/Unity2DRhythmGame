@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteType: 1
-  PerfectLine: {fileID: 1205206525117890, guid: 74e0406f5851b644ab1b098ebdf6a6c6,
+  perfectLine: {fileID: 1205206525117890, guid: 74e0406f5851b644ab1b098ebdf6a6c6,
     type: 2}
 --- !u!212 &212057007098206576
 SpriteRenderer:

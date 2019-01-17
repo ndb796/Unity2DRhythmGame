@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour {
 
+    // 사용자가 입력하는 키에 해당하는 라인들
     public GameObject[] trails;
-
     private SpriteRenderer[] trailsSpriteRenderers;
 
     void Start () {
@@ -17,22 +17,12 @@ public class PlayerBehavior : MonoBehaviour {
     }
 	
 	void Update () {
-		if(Input.GetKey(KeyCode.D))
-        {
-            PressNoteD();
-        }
-        if (Input.GetKey(KeyCode.F))
-        {
-            PressNoteF();
-        }
-        if (Input.GetKey(KeyCode.J))
-        {
-            PressNoteJ();
-        }
-        if (Input.GetKey(KeyCode.K))
-        {
-            PressNoteK();
-        }
+        // 사용자가 입력한 키에 해당하는 라인을 빛나게 처리합니다.
+		if (Input.GetKey(KeyCode.D)) shineTrail(0);
+        if (Input.GetKey(KeyCode.F)) shineTrail(1);
+        if (Input.GetKey(KeyCode.J)) shineTrail(2);
+        if (Input.GetKey(KeyCode.K)) shineTrail(3);
+        // 한 번 빛나게 된 라인은 반복적으로 다시 어둡게 처리됩니다.
         for (int i = 0; i < trailsSpriteRenderers.Length; i++)
         {
             Color color = trailsSpriteRenderers[i].color;
@@ -41,31 +31,12 @@ public class PlayerBehavior : MonoBehaviour {
         }
     }
 
-    public void PressTrail(GameObject trail)
+    // 특정한 키를 눌러 해당 라인을 빛나게 처리합니다.
+    public void shineTrail(int index)
     {
-        SpriteRenderer spriteRenderer = trail.GetComponent<SpriteRenderer>();
+        SpriteRenderer spriteRenderer = trails[index].GetComponent<SpriteRenderer>();
         Color color = spriteRenderer.color;
         color.a = 0.32f;
         spriteRenderer.color = color;
-    }
-
-    public void PressNoteD()
-    {
-        PressTrail(trails[0]);
-    }
-
-    public void PressNoteF()
-    {
-        PressTrail(trails[1]);
-    }
-
-    public void PressNoteJ()
-    {
-        PressTrail(trails[2]);
-    }
-
-    public void PressNoteK()
-    {
-        PressTrail(trails[3]);
     }
 }
