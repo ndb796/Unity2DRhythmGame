@@ -69,9 +69,9 @@
     <Compile Include="Assets\Scripts\PlayerBehavior.cs" />
     <Compile Include="Assets\Scripts\ResultManager.cs" />
     <Compile Include="Assets\Scripts\StartManager.cs" />
-    <None Include="Assets\Resources\Beats\2.txt" />
-    <None Include="Assets\Resources\Beats\3.txt" />
     <None Include="Assets\Resources\Beats\1.txt" />
+    <None Include="Assets\Resources\Beats\3.txt" />
+    <None Include="Assets\Resources\Beats\2.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/My Unity/Unity2DRhythmGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

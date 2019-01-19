@@ -20,8 +20,8 @@ public class ResultManager : MonoBehaviour {
         StringReader reader = new StringReader(textAsset.text);
         // 첫 번째 줄에 적힌 곡 이름을 읽습니다.
         musicTitle.text = reader.ReadLine();
-        score.text = "점수: " + Convert.ToInt32(GameInformation.instance.score).ToString();
-        maxCombo.text = "최대 콤보: " + GameInformation.instance.maxCombo.ToString();
+        score.text = "Score: " + Convert.ToInt32(GameInformation.instance.score).ToString();
+        maxCombo.text = "Combo: " + GameInformation.instance.maxCombo.ToString();
         // 리소스에서 비트(Beat) 이미지 파일을 불러옵니다.
         musicImage.sprite = Resources.Load<Sprite>("Beats/" + GameInformation.instance.music);
         // 성적에 맞는 랭크 이미지를 불러옵니다.
